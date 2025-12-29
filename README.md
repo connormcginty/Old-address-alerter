@@ -1,103 +1,37 @@
-🏠 Old Address Alerter
-A lightweight Chrome Extension that protects you from accidentally using old addresses. It monitors the websites you visit and alerts you if it detects a specific "old address" keyword—whether it's already on the page or if you've just typed it into a form.
+# 🏠 Old Address Alerter
+**Never accidentally use your old address again.** Old Address Alerter is a lightweight Chrome extension that monitors both page content and your typing. If an old address is detected, it triggers a custom audio alert and a browser notification.
 
-✨ Features
-Real-time Detection: Scans page text as you browse.
+---
 
-Form Protection: Alerts you the moment you type an old address into an input field or textarea.
+### ✨ Key Features
+* 🔍 **Dual-Scanning:** Monitors visible page text AND real-time form inputs.
+* 🔊 **Audio Alerts:** Plays `alert.mp3` immediately upon detection.
+* ⏱️ **Anti-Spam:** 10-second cooldown between alerts to stay helpful, not annoying.
+* 🛡️ **Exclusion List:** Whitelist specific domains (like Google or Amazon) via settings.
 
-Audio Alerts: Plays a custom sound (alert.mp3) when a match is found.
+---
 
-Smart Cooldown: Prevents annoying alert loops by waiting 10 seconds between notifications.
+### 🛠️ Installation
 
-Domain Whitelisting: Easily exclude specific websites (like Google or Amazon) where you don't want the extension to run.
+1. **Clone/Download** this repo to your local machine.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer Mode** (top right toggle).
+4. Click **Load unpacked** and select this project folder.
+5. **Important:** Ensure your `alert.mp3` file is in the root folder.
 
-Customizable Keywords: Manage your list of old addresses and excluded domains via a simple popup menu.
+---
 
-🛠️ Installation (Developer Mode)
-Since this is a custom extension not yet on the Web Store, follow these steps to add it to Chrome:
+### 🚀 Quick Start
+1. Click the **Extension Icon** to open settings.
+2. Enter your **Old Address Keywords** (e.g., *123 High Street*).
+3. (Optional) Add **Excluded Domains** (e.g., *google.com*).
+4. Click **Save**.
+5. **Note:** Browsers require you to click anywhere on a page once before audio can play!
 
-Download/Clone this repository to your computer.   
+---
 
-Open Google Chrome and navigate to chrome://extensions/.   
-
-In the top-right corner, toggle Developer mode to ON.   
-
-Click the Load unpacked button that appears.
-
-Select the folder containing the extension files.   
-
-Optional: Pin the extension to your toolbar for easy access to the settings.
-
-[!IMPORTANT] Make sure your alert.mp3 file is in the root folder alongside manifest.json for the audio alerts to work!
-
-🚀 How to Use
-Click the extension icon in your toolbar.
-
-In the Old Address Keywords box, enter the addresses or road names you want to flag (separated by commas).
-
-In the Excluded Domains box, add any sites you want to ignore (e.g., google.com).
-
-Click Save.
-
-Note: Chrome requires you to click anywhere on a webpage at least once after opening it before it will allow the extension to play the alert sound.
-
-📂 Project Structure
-manifest.json: The extension configuration and permissions.
-
-content.js: The "brain" that monitors page content and form inputs.
-
-popup.html/js: The user interface for managing your settings.
-
-alert.mp3: The audio file played during alerts.🏠 Old Address Alerter
-A lightweight Chrome Extension that protects you from accidentally using old addresses. It monitors the websites you visit and alerts you if it detects a specific "old address" keyword—whether it's already on the page or if you've just typed it into a form.
-
-✨ Features
-Real-time Detection: Scans page text as you browse.
-
-Form Protection: Alerts you the moment you type an old address into an input field or textarea.
-
-Audio Alerts: Plays a custom sound (alert.mp3) when a match is found.
-
-Smart Cooldown: Prevents annoying alert loops by waiting 10 seconds between notifications.
-
-Domain Whitelisting: Easily exclude specific websites (like Google or Amazon) where you don't want the extension to run.
-
-Customizable Keywords: Manage your list of old addresses and excluded domains via a simple popup menu.
-
-🛠️ Installation (Developer Mode)
-Since this is a custom extension not yet on the Web Store, follow these steps to add it to Chrome:
-
-Download/Clone this repository to your computer.   
-
-Open Google Chrome and navigate to chrome://extensions/.   
-
-In the top-right corner, toggle Developer mode to ON.   
-
-Click the Load unpacked button that appears.
-
-Select the folder containing the extension files.   
-
-Optional: Pin the extension to your toolbar for easy access to the settings.
-
-[!IMPORTANT] Make sure your alert.mp3 file is in the root folder alongside manifest.json for the audio alerts to work!
-
-🚀 How to Use
-Click the extension icon in your toolbar.
-
-In the Old Address Keywords box, enter the addresses or road names you want to flag (separated by commas).
-
-In the Excluded Domains box, add any sites you want to ignore (e.g., google.com).
-
-Click Save.
-
-Note: Chrome requires you to click anywhere on a webpage at least once after opening it before it will allow the extension to play the alert sound.
-
-📂 Project Structure
-manifest.json: The extension configuration and permissions.
-
-content.js: The "brain" that monitors page content and form inputs.
-
-popup.html/js: The user interface for managing your settings.
-
-alert.mp3: The audio file played during alerts.
+### 📂 File Structure
+* `manifest.json` - Permissions & Config
+* `content.js` - Logic & Monitoring
+* `popup.html/js` - Settings UI
+* `alert.mp3` - Your custom notification sound
